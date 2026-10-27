@@ -3,272 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Tumpa Mahato | Research Associate-I in Knot Theory</title>
+    <title>Dr. Tumpa Mahato | Homepage</title>
     
-    <!-- MathJax for flawless LaTeX rendering -->
+    <!-- MathJax for rendering LaTeX -->
     <script src="https://polyfill.io"></script>
     <script id="MathJax-script" async src="https://jsdelivr.net"></script>
     
     <style>
         :root {
-            --bg-color: #fafafa;
-            --text-color: #2b2b2b;
-            --accent-color: #0f4c81; /* Deep Academic Blue */
-            --border-color: #e5e5e5;
-            --sidebar-bg: #f0f4f8;
+            --bg-light: #f5f7fa;
+            --bg-content: #ffffff;
+            --text-color: #333333;
+            --link-color: #3b82f6;
+            --accent-color: #4f46e5;
+            --border-color: #e5e7eb;
         }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+            background-color: var(--bg-light);
             color: var(--text-color);
-            background-color: var(--bg-color);
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            line-height: 1.6;
         }
 
-        .container {
-            max-width: 1000px;
+        /* Top Header & Navbar Layout */
+        header {
+            background-color: var(--bg-content);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 2.5rem 1.5rem;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 2rem;
         }
 
-        @media (min-width: 768px) {
-            .container {
-                grid-template-columns: 310px 1fr;
-            }
-        }
-
-        /* Sidebar Styling */
-        aside {
-            background-color: var(--sidebar-bg);
-            padding: 1.75rem;
-            border-radius: 8px;
-            align-self: start;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
-
-        .profile-img {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            display: block;
-            margin: 0 auto 1.25rem;
-            background-color: #cfd8dc;
-            object-fit: cover;
-            border: 3px solid #fff;
-        }
-
-        .info-block h1 {
-            font-size: 1.35rem;
-            margin: 0 0 0.5rem 0;
-            text-align: center;
+        .site-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
             color: #111;
         }
 
-        .info-block p {
-            font-size: 0.88rem;
-            margin: 0.3rem 0;
-            text-align: center;
+        .nav-tabs {
+            display: flex;
+            gap: 0.5rem;
         }
 
-        .contact-details {
-            margin-top: 1.25rem;
-            border-top: 1px solid rgba(0,0,0,0.08);
-            padding-top: 1rem;
-            font-size: 0.82rem;
-            color: #444;
+        .tab-btn {
+            background: none;
+            border: none;
+            padding: 0.6rem 1rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            color: #555;
+            border-radius: 4px;
+            transition: all 0.2s;
         }
 
-        .contact-details p {
-            text-align: left;
-            margin: 0.4rem 0;
-            word-break: break-word;
-        }
-
-        .social-links {
-            margin-top: 1.25rem;
-            text-align: center;
-            border-top: 1px solid rgba(0,0,0,0.08);
-            padding-top: 1rem;
-        }
-
-        .social-links a {
-            margin: 0 6px;
+        .tab-btn:hover {
+            background-color: #f3f4f6;
             color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.88rem;
         }
 
-        .social-links a:hover {
+        .tab-btn.active {
+            background-color: #e0e7ff;
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        /* Main Workspace Split Layout */
+        .wrapper {
+            max-width: 1200px;
+            margin: 2rem auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            padding: 0 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .wrapper {
+                grid-template-columns: 300px 1fr;
+            }
+        }
+
+        /* Profile Left Sidebar Card */
+        .profile-sidebar {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .avatar {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            margin-bottom: 1.5rem;
+        }
+
+        .profile-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 0.5rem 0;
+            color: #111;
+        }
+
+        .profile-role {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .contact-links a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        .contact-links a:hover {
             text-decoration: underline;
         }
 
-        /* Main Content Styling */
-        main section {
-            margin-bottom: 2.5rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 2rem;
+        /* Right Content Panel Container */
+        .content-panel {
+            background-color: var(--bg-content);
+            border-radius: 8px;
+            padding: 2.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            min-height: 450px;
         }
 
-        main section:last-child {
-            border-bottom: none;
+        .tab-content {
+            display: none;
         }
 
-        h2 {
-            color: var(--accent-color);
-            font-size: 1.4rem;
+        .tab-content.active {
+            display: block;
+        }
+
+        .section-heading {
+            font-size: 1.8rem;
+            text-align: center;
             margin-top: 0;
-            border-bottom: 2px solid var(--accent-color);
-            display: inline-block;
-            padding-bottom: 3px;
+            margin-bottom: 2rem;
+            color: #111;
+            position: relative;
         }
 
-        h3 {
-            font-size: 1.05rem;
-            color: #333;
-            margin: 1.5rem 0 0.5rem 0;
+        .section-heading::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 0.5rem auto 0 auto;
+            border-radius: 2px;
+        }
+
+        /* Typography & Custom Section Styling */
+        p {
+            margin-bottom: 1.25rem;
+            text-align: justify;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
 
         ul {
-            padding-left: 1.2rem;
-            margin: 0.5rem 0;
+            padding-left: 1.25rem;
         }
 
         li {
             margin-bottom: 0.75rem;
-            font-size: 0.95rem;
         }
 
-        .paper-title {
+        .pub-item {
+            margin-bottom: 1.25rem;
+        }
+
+        .pub-title {
             font-weight: 600;
             color: #111;
         }
 
-        .links-block {
-            margin-top: 0.25rem;
+        .pub-links {
+            font-size: 0.85rem;
+            margin-top: 0.2rem;
         }
 
-        .links-block a {
-            font-size: 0.82rem;
-            margin-right: 12px;
-            color: var(--accent-color);
-            text-decoration: none;
-            background: rgba(15, 76, 129, 0.06);
+        .pub-links a {
+            margin-right: 10px;
+            background: #f0f4ff;
             padding: 2px 6px;
             border-radius: 4px;
-        }
-
-        .links-block a:hover {
-            background: var(--accent-color);
-            color: #fff;
-        }
-
-        .meta-text {
-            font-size: 0.85rem;
-            color: #666;
-            margin-top: 0.1rem;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            font-size: 0.8rem;
-            color: #666;
-            margin-top: auto;
-            border-top: 1px solid var(--border-color);
-            background: #fff;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        
-        <aside>
-            <img src="profile.jpg" alt="Tumpa Mahato" class="profile-img">
-            <div class="info-block">
-                <h1>Tumpa Mahato</h1>
-                <p>Research Associate-I</p>
-                <p><strong>IIT Ropar</strong></p>
-                
-                <div class="contact-details">
-                    <p>📧 tmpa.m80@gmail.com</p>
-                    <p>📧 staff.tumpa.mahato@iitrpr.ac.in</p>
-                    <p>📞 +91-8967271768</p>
-                    <p>📍 Super Academic Building,<br>IIT Ropar, Rupnagar,<br>Punjab, India - 140001</p>
-                </div>
+    <!-- Top Fixed Navigation matching reference -->
+    <header>
+        <div class="nav-container">
+            <div class="site-title">Tumpa Mahato</div>
+            <div class="nav-tabs">
+                <button class="tab-btn active" onclick="switchTab('about')">Home</button>
+                <button class="tab-btn" onclick="switchTab('research')">Research</button>
+                <button class="tab-btn" onclick="switchTab('teaching')">Teaching</button>
+                <button class="tab-btn" onclick="switchTab('publications')">Publications</button>
+                <button class="tab-btn" onclick="switchTab('contact')">Contact</button>
             </div>
-            <div class="social-links">
-                <a href="https://arxiv.org" target="_blank">arXiv</a> | 
-                <a href="#" target="_blank">Curriculum Vitae</a>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        
+        <aside class="profile-sidebar">
+            <img src="profile.jpg" alt="Tumpa Mahato" class="avatar">
+            <div class="profile-name">Tumpa Mahato</div>
+            <div class="profile-role">
+                Research Associate-I in the <a href="https://iitrpr.ac.in" target="_blank">Department of Mathematics</a>, IIT Ropar
+            </div>
+            
+            <div class="contact-links">
+                <a href="mailto:staff.tumpa.mahato@iitrpr.ac.in">📧 Email Profile</a>
+                <a href="https://arxiv.org" target="_blank">📄 arXiv Library</a>
+                <a href="cv.pdf" target="_blank">📋 Curriculum Vitae</a>
             </div>
         </aside>
 
-        <!-- Right Main Column -->
-        <main>
-            <!-- About Me -->
-            <section id="about">
-                <h2>About Me</h2>
-                <p>I am a <strong>Research Associate-I</strong> at the <strong>Indian Institute of Technology (IIT) Ropar</strong>, working within the ANRF-CRG funded project titled <em>"Twisted Links and Twisted Virtual Knot"</em> under the guidance of Dr. Madeti Prabhakar.</p>
-                <p>I earned my Ph.D. in Mathematics from the <strong>Indian Institute of Science Education and Research (IISER) Pune</strong> under the supervision of Prof. Rama Mishra, where my doctoral thesis focused on the <em>Parameterization of Knotted Surfaces Arising from Classical and Welded Knots</em>.</p>
-            </section>
+        <!-- Right Column: Context Switching Panels -->
+        <main class="content-panel">
+            
+            <!-- Tab 1: About Me -->
+            <div id="about" class="tab-content active">
+                <h2 class="section-heading">About Me</h2>
+                <p>Hello! Welcome to my homepage!</p>
+                <p>My name is <strong>Tumpa Mahato</strong>, and I am currently a Research Associate-I in the <a href="https://iitrpr.ac.in" target="_blank">Department of Mathematics at IIT Ropar</a>, working on the ANRF-CRG project <em>"Twisted Links and Twisted Virtual Knot"</em> supervised by Dr. Madeti Prabhakar.</p>
+                <p>Previously, I completed my Ph.D. in Mathematics from the <a href="https://iiserpune.ac.in" target="_blank">Indian Institute of Science Education and Research (IISER) Pune</a> under the supervision of Prof. Rama Mishra. My doctoral thesis was titled <em>"Parameterization of Knotted Surfaces Arising from Classical and Welded Knots"</em>. Before that, I completed my Masters in Mathematics at Sidho-Kanho-Birsha University.</p>
+                <p>My primary area of interest lies in <strong>Knot Theory</strong> and <strong>Low-dimensional topology</strong>. More specifically, my research explores surface knot theory, knots on thickened surfaces, virtual and twisted knot theories, welded knot theory, and hyperbolic configurations.</p>
+            </div>
 
-            <!-- Research Interests -->
-            <section id="research">
-                <h2>Research Interests</h2>
-                <p>My primary research architecture resides in <strong>low-dimensional topology</strong> and <strong>knot theory</strong>, focusing closely on:</p>
+            <!-- Tab 2: Research -->
+            <div id="research" class="tab-content">
+                <h2 class="section-heading">Research</h2>
+                <p>My ongoing mathematical work explores structural developments in knot spaces across multiple areas:</p>
                 <ul>
-                    <li>Surface knot theory and knots on thickened surfaces.</li>
-                    <li>Virtual, twisted, and welded knot theories.</li>
-                    <li>Hyperbolic knot theory.</li>
+                    <li><strong>Surface Knot Theory:</strong> Investigating the structural parameters and topological layout maps of knotted surfaces.</li>
+                    <li><strong>Virtual & Twisted Knot Invariants:</strong> Studying invariants like the $Q^z$ polynomial adjustments for exceptional link spaces.</li>
+                    <li><strong>Computational Modeling:</strong> Developing algorithmic implementations. Notably, our companion Mathematica workspace tracking <em>"Polynomially Knotted 2-spheres"</em> was officially chosen and showcased in the "Publication Materials" and "Staff Picks" columns by Wolfram.</li>
                 </ul>
-                
-                <h3>Research Highlights</h3>
-                <ul>
-                    <li><strong>Wolfram Community Feature:</strong> The Mathematica notebook implementation accompanying our work on <em>"Polynomially Knotted 2-spheres"</em> was selected and showcased under the "Publication Materials" and "Staff Picks" editorial columns by Wolfram.</li>
-                </ul>
-            </section>
+            </div>
 
-            <!-- Publications & Research Outputs -->
-            <section id="publications">
-                <h2>Publications & Preprints</h2>
-                
-                <h3>Journal Articles</h3>
-                <ul>
-                    <li>
-                        <span class="paper-title">Isolated Regions of a Link Projection.</span><br>
-                        with Ayaka Shimizu. <br>
-                        <em>Journal of Knot Theory and Its Ramifications</em>, Vol. 33, No. 13, 2024.
-                        <div class="links-block"><a href="https://doi.org" target="_blank">Journal DOI</a></div>
-                    </li>
-                    <li>
-                        <span class="paper-title">Non-trivial Welded Knots and Ribbon Torus Knots.</span><br>
-                        with Sahil Joshi and Rama Mishra. <br>
-                        <em>Advances in kNot Theory, Contemporary Mathematics</em>, Vol. 846, American Mathematical Society, 2026, pp. 137-160.
-                        <div class="links-block"><a href="https://doi.org" target="_blank">Journal DOI</a></div>
-                    </li>
-                    <li>
-                        <span class="paper-title">A mathematical model for distributed waning of vaccine-derived immunity: characterizing dynamical impact on measles elimination.</span><br>
-                        with Aniruddha Deka and Samit Bhattacharyya. <br>
-                        <em>Franklin Open</em>, Vol. 9, 2024.
-                        <div class="links-block"><a href="https://sciencedirect.com" target="_blank">Journal Link</a></div>
-                    </li>
-                </ul>
-
-                <h3>Publications Under Review</h3>
-                <ul>
-                    <li>
-                        <span class="paper-title">A Refinement of the Q-polynomial for twisted knots.</span><br>
-                        with Prabhakar Madeti (2026).
-                        <div class="links-block"><a href="https://arxiv.org" target="_blank">arXiv:2608.09514</a></div>
-                    </li>
-                    <li>
-                        <span class="paper-title">Arc shift move and region arc shift move for twisted knots.</span><br>
+            <!-- Tab 3: Teaching -->
+            <div id="teaching" class="tab-content">
+                <h2 class="section-heading">Teaching & Work History</h2>
+                <p><strong>Indian Institute of Technology Ropar</strong><br>
+                <em>Teaching Assistant</em> (Jan 2025 - Present)<br>
