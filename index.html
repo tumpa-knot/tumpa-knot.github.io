@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Alex Topological | Postdoctoral Researcher in Knot Theory</title>
+    
+    <!-- MathJax for rendering LaTeX -->
+    <script src="https://polyfill.io"></script>
+    <script id="MathJax-script" async src="https://jsdelivr.net"></script>
+    
+    <style>
+        :root {
+            --bg-color: #fcfcfc;
+            --text-color: #222;
+            --accent-color: #0056b3;
+            --border-color: #e0e0e0;
+            --sidebar-bg: #f4f4f6;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                grid-template-columns: 280px 1fr;
+            }
+        }
+
+        /* Sidebar Styling */
+        aside {
+            background-color: var(--sidebar-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            align-self: start;
+        }
+
+        .profile-img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 1rem;
+            background-color: #ddd; /* Placeholder color */
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+
+        .info-block h1 {
+            font-size: 1.4rem;
+            margin: 0 0 0.5rem 0;
+            text-align: center;
+        }
+
+        .info-block p {
+            font-size: 0.9rem;
+            margin: 0.25rem 0;
+            text-align: center;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .social-links a {
+            margin: 0 5px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* Main Content Styling */
+        main section {
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+
+        main section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .paper-title {
+            font-weight: bold;
+        }
+
+        .links-block a {
+            font-size: 0.85rem;
+            margin-right: 10px;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .links-block a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: auto;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <aside>
+            <!-- Replace with your actual image path -->
+            <img src="profile.jpg" alt="Alex Topological" class="profile-img">
+            <div class="info-block">
+                <h1>Dr. Alex Topological</h1>
+                <p>Postdoctoral Researcher</p>
+                <p>Department of Mathematics</p>
+                <p><strong>University of Science</strong></p>
+                <p style="margin-top: 10px; font-size: 0.85rem; color: #555;">alex.topological@university.edu</p>
+                <p style="font-size: 0.85rem; color: #555;">Office: 404 Riemann Hall</p>
+            </div>
+            <div class="social-links">
+                <a href="https://arxiv.org" target="_blank">arXiv</a> | 
+                <a href="cv.pdf" target="_blank">CV (PDF)</a>
+            </div>
+        </aside>
+
+        <!-- Right Column: Main Academic Content -->
+        <main>
+            <!-- About Section -->
+            <section id="about">
+                <h2>About Me</h2>
+                <p>I am a postdoctoral research fellow at the University of Science, working alongside the Topology and Geometry Group. I completed my Ph.D. at Institute of Geometry under the supervision of Prof. Henri Poincaré.</p>
+                <p>My research lies at the intersection of <strong>low-dimensional topology</strong> and <strong>knot theory</strong>. Specifically, I study quantum knot invariants, Khovanov homology, and smooth 4-manifold invariants via trisection and surgery theory.</p>
+            </section>
+
+            <!-- Research Section -->
+            <section id="research">
+                <h2>Research Interests</h2>
+                <p>My current projects focus on the following themes:</p>
+                <ul>
+                    <li><strong>Smooth Concordance:</strong> Investigating the structural properties of the knot concordance group \(\mathcal{C}\).</li>
+                    <li><strong>Grid Diagrams:</strong> Developing computational algorithms to optimize grid index variants for exceptional link families.</li>
+                    <li><strong>Categorification:</strong> Extending link homologies to virtual and welded knot configurations.</li>
+                </ul>
+            </section>
+
+            <!-- Publications Section -->
+            <section id="publications">
+                <h2>Publications & Preprints</h2>
+                
+                <p><em>Preprints</em></p>
+                <ul>
+                    <li>
+                        <span class="paper-title">A note on the slice-ribbon conjecture for 12-crossing knots.</span><br>
+                        with J. Smith. <br>
+                        <div class="links-block">
+                            <a href="#">[arXiv:2610.XXXXX]</a>
+                            <a href="#">[Abstract]</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <p><em>Journal Articles</em></p>
+                <ul>
+                    <li>
+                        <span class="paper-title">Obstructions to unknotting operations via modified Khovanov polynomials.</span><br>
+                        <em>Journal of Knot Theory and Its Ramifications</em>, Vol. 35, 2025. <br>
+                        <div class="links-block">
+                            <a href="#">[Journal Link]</a>
+                            <a href="#">[arXiv:2402.XXXXX]</a>
+                            <a href="#">[KnotData Code]</a>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Teaching Section -->
+            <section id="teaching">
+                <h2>Teaching</h2>
+                <p><strong>University of Science</strong></p>
+                <ul>
+                    <li>Fall 2026: Instructor for Math 412: <em>Introduction to Low-Dimensional Topology</em>.</li>
+                    <li>Spring 2026: Teaching Assistant for Math 201: <em>Linear Algebra</em>.</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        &copy; 2026 Dr. Alex Topological. Built with minimal HTML/CSS.
+    </footer>
+
+</body>
+</html>
