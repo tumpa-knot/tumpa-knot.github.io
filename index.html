@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Alex Topological | Postdoctoral Researcher in Knot Theory</title>
+    <title>Dr. Tumpa Mahato | Research Associate-I in Knot Theory</title>
     
-    <!-- MathJax for rendering LaTeX -->
+    <!-- MathJax for flawless LaTeX rendering -->
     <script src="https://polyfill.io"></script>
     <script id="MathJax-script" async src="https://jsdelivr.net"></script>
     
     <style>
         :root {
-            --bg-color: #fcfcfc;
-            --text-color: #222;
-            --accent-color: #0056b3;
-            --border-color: #e0e0e0;
-            --sidebar-bg: #f4f4f6;
+            --bg-color: #fafafa;
+            --text-color: #2b2b2b;
+            --accent-color: #0f4c81; /* Deep Academic Blue */
+            --border-color: #e5e5e5;
+            --sidebar-bg: #f0f4f8;
         }
 
         body {
@@ -31,69 +31,91 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 2rem 1.5rem;
+            padding: 2.5rem 1.5rem;
             display: grid;
             grid-template-columns: 1fr;
-            gap: 2rem;
+            gap: 2.5rem;
         }
 
         @media (min-width: 768px) {
             .container {
-                grid-template-columns: 280px 1fr;
+                grid-template-columns: 310px 1fr;
             }
         }
 
         /* Sidebar Styling */
         aside {
             background-color: var(--sidebar-bg);
-            padding: 1.5rem;
+            padding: 1.75rem;
             border-radius: 8px;
             align-self: start;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
         .profile-img {
-            width: 100%;
-            max-width: 200px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
             display: block;
-            margin: 0 auto 1rem;
-            background-color: #ddd; /* Placeholder color */
-            aspect-ratio: 1/1;
+            margin: 0 auto 1.25rem;
+            background-color: #cfd8dc;
             object-fit: cover;
+            border: 3px solid #fff;
         }
 
         .info-block h1 {
-            font-size: 1.4rem;
+            font-size: 1.35rem;
             margin: 0 0 0.5rem 0;
             text-align: center;
+            color: #111;
         }
 
         .info-block p {
-            font-size: 0.9rem;
-            margin: 0.25rem 0;
+            font-size: 0.88rem;
+            margin: 0.3rem 0;
             text-align: center;
+        }
+
+        .contact-details {
+            margin-top: 1.25rem;
+            border-top: 1px solid rgba(0,0,0,0.08);
+            padding-top: 1rem;
+            font-size: 0.82rem;
+            color: #444;
+        }
+
+        .contact-details p {
+            text-align: left;
+            margin: 0.4rem 0;
+            word-break: break-word;
         }
 
         .social-links {
-            margin-top: 1rem;
+            margin-top: 1.25rem;
             text-align: center;
+            border-top: 1px solid rgba(0,0,0,0.08);
+            padding-top: 1rem;
         }
 
         .social-links a {
-            margin: 0 5px;
+            margin: 0 6px;
             color: var(--accent-color);
             text-decoration: none;
-            font-weight: bold;
-            font-size: 0.9rem;
+            font-weight: 600;
+            font-size: 0.88rem;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
         }
 
         /* Main Content Styling */
         main section {
             margin-bottom: 2.5rem;
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 1.5rem;
+            padding-bottom: 2rem;
         }
 
         main section:last-child {
@@ -102,40 +124,67 @@
 
         h2 {
             color: var(--accent-color);
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-top: 0;
+            border-bottom: 2px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 3px;
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            color: #333;
+            margin: 1.5rem 0 0.5rem 0;
         }
 
         ul {
             padding-left: 1.2rem;
+            margin: 0.5rem 0;
         }
 
         li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
         }
 
         .paper-title {
-            font-weight: bold;
+            font-weight: 600;
+            color: #111;
+        }
+
+        .links-block {
+            margin-top: 0.25rem;
         }
 
         .links-block a {
-            font-size: 0.85rem;
-            margin-right: 10px;
+            font-size: 0.82rem;
+            margin-right: 12px;
             color: var(--accent-color);
             text-decoration: none;
+            background: rgba(15, 76, 129, 0.06);
+            padding: 2px 6px;
+            border-radius: 4px;
         }
 
         .links-block a:hover {
-            text-decoration: underline;
+            background: var(--accent-color);
+            color: #fff;
+        }
+
+        .meta-text {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 0.1rem;
         }
 
         footer {
             text-align: center;
-            padding: 1rem;
+            padding: 1.5rem;
             font-size: 0.8rem;
             color: #666;
             margin-top: auto;
             border-top: 1px solid var(--border-color);
+            background: #fff;
         }
     </style>
 </head>
@@ -144,87 +193,82 @@
     <div class="container">
         
         <aside>
-            <!-- Replace with your actual image path -->
-            <img src="profile.jpg" alt="Alex Topological" class="profile-img">
+            <img src="profile.jpg" alt="Tumpa Mahato" class="profile-img">
             <div class="info-block">
-                <h1>Dr. Alex Topological</h1>
-                <p>Postdoctoral Researcher</p>
-                <p>Department of Mathematics</p>
-                <p><strong>University of Science</strong></p>
-                <p style="margin-top: 10px; font-size: 0.85rem; color: #555;">alex.topological@university.edu</p>
-                <p style="font-size: 0.85rem; color: #555;">Office: 404 Riemann Hall</p>
+                <h1>Tumpa Mahato</h1>
+                <p>Research Associate-I</p>
+                <p><strong>IIT Ropar</strong></p>
+                
+                <div class="contact-details">
+                    <p>📧 tmpa.m80@gmail.com</p>
+                    <p>📧 staff.tumpa.mahato@iitrpr.ac.in</p>
+                    <p>📞 +91-8967271768</p>
+                    <p>📍 Super Academic Building,<br>IIT Ropar, Rupnagar,<br>Punjab, India - 140001</p>
+                </div>
             </div>
             <div class="social-links">
                 <a href="https://arxiv.org" target="_blank">arXiv</a> | 
-                <a href="cv.pdf" target="_blank">CV (PDF)</a>
+                <a href="#" target="_blank">Curriculum Vitae</a>
             </div>
         </aside>
 
-        <!-- Right Column: Main Academic Content -->
+        <!-- Right Main Column -->
         <main>
-            <!-- About Section -->
+            <!-- About Me -->
             <section id="about">
                 <h2>About Me</h2>
-                <p>I am a postdoctoral research fellow at the University of Science, working alongside the Topology and Geometry Group. I completed my Ph.D. at Institute of Geometry under the supervision of Prof. Henri Poincaré.</p>
-                <p>My research lies at the intersection of <strong>low-dimensional topology</strong> and <strong>knot theory</strong>. Specifically, I study quantum knot invariants, Khovanov homology, and smooth 4-manifold invariants via trisection and surgery theory.</p>
+                <p>I am a <strong>Research Associate-I</strong> at the <strong>Indian Institute of Technology (IIT) Ropar</strong>, working within the ANRF-CRG funded project titled <em>"Twisted Links and Twisted Virtual Knot"</em> under the guidance of Dr. Madeti Prabhakar.</p>
+                <p>I earned my Ph.D. in Mathematics from the <strong>Indian Institute of Science Education and Research (IISER) Pune</strong> under the supervision of Prof. Rama Mishra, where my doctoral thesis focused on the <em>Parameterization of Knotted Surfaces Arising from Classical and Welded Knots</em>.</p>
             </section>
 
-            <!-- Research Section -->
+            <!-- Research Interests -->
             <section id="research">
                 <h2>Research Interests</h2>
-                <p>My current projects focus on the following themes:</p>
+                <p>My primary research architecture resides in <strong>low-dimensional topology</strong> and <strong>knot theory</strong>, focusing closely on:</p>
                 <ul>
-                    <li><strong>Smooth Concordance:</strong> Investigating the structural properties of the knot concordance group \(\mathcal{C}\).</li>
-                    <li><strong>Grid Diagrams:</strong> Developing computational algorithms to optimize grid index variants for exceptional link families.</li>
-                    <li><strong>Categorification:</strong> Extending link homologies to virtual and welded knot configurations.</li>
+                    <li>Surface knot theory and knots on thickened surfaces.</li>
+                    <li>Virtual, twisted, and welded knot theories.</li>
+                    <li>Hyperbolic knot theory.</li>
+                </ul>
+                
+                <h3>Research Highlights</h3>
+                <ul>
+                    <li><strong>Wolfram Community Feature:</strong> The Mathematica notebook implementation accompanying our work on <em>"Polynomially Knotted 2-spheres"</em> was selected and showcased under the "Publication Materials" and "Staff Picks" editorial columns by Wolfram.</li>
                 </ul>
             </section>
 
-            <!-- Publications Section -->
+            <!-- Publications & Research Outputs -->
             <section id="publications">
                 <h2>Publications & Preprints</h2>
                 
-                <p><em>Preprints</em></p>
+                <h3>Journal Articles</h3>
                 <ul>
                     <li>
-                        <span class="paper-title">A note on the slice-ribbon conjecture for 12-crossing knots.</span><br>
-                        with J. Smith. <br>
-                        <div class="links-block">
-                            <a href="#">[arXiv:2610.XXXXX]</a>
-                            <a href="#">[Abstract]</a>
-                        </div>
+                        <span class="paper-title">Isolated Regions of a Link Projection.</span><br>
+                        with Ayaka Shimizu. <br>
+                        <em>Journal of Knot Theory and Its Ramifications</em>, Vol. 33, No. 13, 2024.
+                        <div class="links-block"><a href="https://doi.org" target="_blank">Journal DOI</a></div>
+                    </li>
+                    <li>
+                        <span class="paper-title">Non-trivial Welded Knots and Ribbon Torus Knots.</span><br>
+                        with Sahil Joshi and Rama Mishra. <br>
+                        <em>Advances in kNot Theory, Contemporary Mathematics</em>, Vol. 846, American Mathematical Society, 2026, pp. 137-160.
+                        <div class="links-block"><a href="https://doi.org" target="_blank">Journal DOI</a></div>
+                    </li>
+                    <li>
+                        <span class="paper-title">A mathematical model for distributed waning of vaccine-derived immunity: characterizing dynamical impact on measles elimination.</span><br>
+                        with Aniruddha Deka and Samit Bhattacharyya. <br>
+                        <em>Franklin Open</em>, Vol. 9, 2024.
+                        <div class="links-block"><a href="https://sciencedirect.com" target="_blank">Journal Link</a></div>
                     </li>
                 </ul>
 
-                <p><em>Journal Articles</em></p>
+                <h3>Publications Under Review</h3>
                 <ul>
                     <li>
-                        <span class="paper-title">Obstructions to unknotting operations via modified Khovanov polynomials.</span><br>
-                        <em>Journal of Knot Theory and Its Ramifications</em>, Vol. 35, 2025. <br>
-                        <div class="links-block">
-                            <a href="#">[Journal Link]</a>
-                            <a href="#">[arXiv:2402.XXXXX]</a>
-                            <a href="#">[KnotData Code]</a>
-                        </div>
+                        <span class="paper-title">A Refinement of the Q-polynomial for twisted knots.</span><br>
+                        with Prabhakar Madeti (2026).
+                        <div class="links-block"><a href="https://arxiv.org" target="_blank">arXiv:2608.09514</a></div>
                     </li>
-                </ul>
-            </section>
-
-            <!-- Teaching Section -->
-            <section id="teaching">
-                <h2>Teaching</h2>
-                <p><strong>University of Science</strong></p>
-                <ul>
-                    <li>Fall 2026: Instructor for Math 412: <em>Introduction to Low-Dimensional Topology</em>.</li>
-                    <li>Spring 2026: Teaching Assistant for Math 201: <em>Linear Algebra</em>.</li>
-                </ul>
-            </section>
-        </main>
-    </div>
-
-    <footer>
-        &copy; 2026 Dr. Alex Topological. Built with minimal HTML/CSS.
-    </footer>
-
-</body>
-</html>
+                    <li>
+                        <span class="paper-title">Arc shift move and region arc shift move for twisted knots.</span><br>
