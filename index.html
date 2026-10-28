@@ -224,6 +224,53 @@
             padding: 2px 6px;
             border-radius: 4px;
         }
+        /* Gallery Styles for Sketchbook and Memory */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.gallery-card {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    background-color: #eaeaea;
+}
+
+.gallery-info {
+    padding: 1rem;
+}
+
+.gallery-info h4 {
+    margin: 0 0 0.5rem 0;
+    color: #111;
+    font-size: 1.05rem;
+}
+
+.gallery-info p {
+    margin: 0;
+    font-size: 0.88rem;
+    color: #555;
+    text-align: left;
+}
+
     </style>
 </head>
 <body>
@@ -237,6 +284,9 @@
                 <button class="tab-btn" onclick="switchTab('research')">Research</button>
                 <button class="tab-btn" onclick="switchTab('teaching')">Teaching</button>
                 <button class="tab-btn" onclick="switchTab('publications')">Publications</button>
+                <button class="tab-btn" onclick="switchTab('sketchbook')">Sketchbook</button>
+    <button class="tab-btn" onclick="switchTab('memory')">Memory</button>
+    
                 <button class="tab-btn" onclick="switchTab('contact')">Contact</button>
             </div>
         </div>
@@ -266,8 +316,8 @@
                 <h2 class="section-heading">About Me</h2>
                 <p>Hello! Welcome to my homepage!</p>
                 <p>My name is <strong>Tumpa Mahato</strong>, and I am currently a Research Associate-I in the <a href="https://iitrpr.ac.in" target="_blank">Department of Mathematics at IIT Ropar</a>, working on the ANRF-CRG project <em>"Twisted Links and Twisted Virtual Knot"</em> supervised by Dr. Madeti Prabhakar.</p>
-                <p>Previously, I completed my Ph.D. in Mathematics from the <a href="https://iiserpune.ac.in" target="_blank">Indian Institute of Science Education and Research (IISER) Pune</a> under the supervision of Prof. Rama Mishra. My doctoral thesis was titled <em>"Parameterization of Knotted Surfaces Arising from Classical and Welded Knots"</em>. Before that, I completed my Masters in Mathematics at Sidho-Kanho-Birsha University.</p>
-                <p>My primary area of interest lies in <strong>Knot Theory</strong> and <strong>Low-dimensional topology</strong>. More specifically, my research explores surface knot theory, knots on thickened surfaces, virtual and twisted knot theories, welded knot theory, and hyperbolic configurations.</p>
+                <p>Previously, I completed my Ph.D. in Mathematics from the <a href="https://iiserpune.ac.in" target="_blank">Indian Institute of Science Education and Research (IISER) Pune</a> under the supervision of Prof. Rama Mishra. My doctoral thesis was titled <em>"Parameterization of Knotted Surfaces Arising from Classical and Welded Knots"</em>.</p>
+                <p>My primary area of interest lies in <strong>Knot Theory</strong> and <strong>Low-dimensional topology</strong>. More specifically, my research explores different knotted structures in three and four dimensions.</p>
             </div>
 
             <!-- Tab 2: Research -->
@@ -286,3 +336,50 @@
                 <h2 class="section-heading">Teaching & Work History</h2>
                 <p><strong>Indian Institute of Technology Ropar</strong><br>
                 <em>Teaching Assistant</em> (Jan 2025 - Present)<br>
+<!-- ================= SKETCHBOOK TAB ================= -->
+<div id="sketchbook" class="tab-content">
+    <h2 class="section-heading">Sketchbook</h2>
+    <p>Hand-drawn knot charts, computational surface configurations, and working geometric proofs.</p>
+    
+    <div class="gallery-grid">
+        <div class="gallery-card">
+            <img src="proof1.jpg" alt="Proof Sketch">
+            <div class="gallery-info">
+                <h4>Knot Projection Variant Proof</h4>
+                <p>Edit this caption text to describe your proof diagram or formula sketches.</p>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="proof2.jpg" alt="Surface Mapping">
+            <div class="gallery-info">
+                <h4>Welded Torus Mapping Layout</h4>
+                <p>Edit this caption text to describe your coordinates or grid step details.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ================= MEMORY TAB ================= -->
+<div id="memory" class="tab-content">
+    <h2 class="section-heading">Memory</h2>
+    <p>Snapshots from math conferences, workshops, and international seminar gatherings.</p>
+    
+    <div class="gallery-grid">
+        <div class="gallery-card">
+            <img src="conf1.jpg" alt="Conference Snapshot">
+            <div class="gallery-info">
+                <h4>Oberwolfach Seminar 2026</h4>
+                <p>Germany | Presented research on arc shift move numbers for twisted configurations.</p>
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <img src="conf2.jpg" alt="Conference Snapshot">
+            <div class="gallery-info">
+                <h4>IIT Ropar Knot Conference 2025</h4>
+                <p>Punjab, India | Contributed presentation tracking Gordian complexes.</p>
+            </div>
+        </div>
+    </div>
+</div>
